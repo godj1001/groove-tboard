@@ -1,0 +1,13 @@
+.cardBox{
+    background-color: white;
+    border:1px solid rgb(192, 192, 192);
+    padding: 10px;
+    width: 100%;
+    height: 120px;
+    margin-top: 10px;
+    display: block;
+    // transition: transform 0.2s ease-out;
+    .dragStatus{
+        position: fixed;
+    }
+}

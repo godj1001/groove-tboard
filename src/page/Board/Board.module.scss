@@ -1,0 +1,9 @@
+.boardPage{
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 10px 10px 0 10px;
+    background-color: white;
+}

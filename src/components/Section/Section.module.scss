@@ -1,0 +1,25 @@
+.sectionBox{
+    display: inline-block;
+    border: 1px solid rgb(190, 189, 188);
+    border-radius: 10px;
+    background-color: white;
+    min-height: 95%;
+    height: max-content;
+    width: 300px;
+    color: black;
+    margin: 10px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    .sectionName{
+        padding: 10px;
+        font-size: 20px;
+        text-align: left;
+    }
+    .sectionContent{
+        padding: 12px
+    }
+}
+
+.transformBox{
+    // transition: transform 0.3s ease-out;
+}
