@@ -74,12 +74,13 @@ const Section = (props: SectionComponentModel) => {
                             if (card?.parentId === hoverItem?.value?.parentId) {
                                 let cardIndex = value.cardList.findIndex(item => item.cardId === hoverItem?.value.cardId);
 
-                                let moveD = hoverIndex > cardIndex ? 'down' : 'up';
-                                move = hoverIndex <= index ? moveD : null;
+                                let moveD = hoverIndex > cardIndex ? 'up' : 'down';
+                                move = hoverIndex < index ? moveD : null;
 
                             } else if (card?.parentId !== hoverItem?.value?.parentId) {
                                 move = typeof hoverIndex === 'number' ? hoverIndex <= index ? 'down' : null : null;
                             }
+                            move = (move === null) ? null : (move ? 'down' : 'up');
                             if (move === 'up' && index === 0) {
                                 move = null;
                             }

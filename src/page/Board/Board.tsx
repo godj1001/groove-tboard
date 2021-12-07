@@ -97,7 +97,7 @@ const updateData = (sectionList: SectionModel[], oldData: UpdataModel, newData: 
     }
 };
 const getXHover = (x) => {
-    return Math.max(Math.floor((x - 10) / 320), 0);
+    return Math.max(Math.floor((x - 10) / 310), 0);
 };
 const Board = (props: BoardModel) => {
     const [sectionHover, setSectionHover] = useState(null);
@@ -198,16 +198,17 @@ const Board = (props: BoardModel) => {
                     let move = null;
                     if (sectionHover !== null) {
                         const sectionIndex = boardInfo.sectionList.findIndex(section => section.sectionId === sectionItem?.value?.sectionId);
-                        if (sectionHover < index) {
-                            move = 'right';
+
+                        if (sectionIndex < index) {
+                            if (sectionHover < index) {
+                                move = 'right';
+                            }
                         } else {
-                            move = null;
+                            if (sectionHover <= index) {
+                                move = 'right';
+                            }
                         }
-                        if (sectionHover < index) {
-                            move = 'right';
-                        } else {
-                            move = null;
-                        }
+
                         console.log(sectionHover, sectionIndex, index);
                     }
                     return (
